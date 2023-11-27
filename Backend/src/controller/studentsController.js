@@ -29,7 +29,7 @@ exports.StudentById = async (req, res) => {
     let result = await StudentsModel.find(query);
     res.status(200).json({ status: "success", data: result });
   } catch (error) {
-    res.status(200).json({ status: "fail", data: result });
+    res.status(200).json({ status: "fail", data: error.toString() });
   }
 };
 
@@ -42,7 +42,7 @@ exports.UpdateStudent = async (req, res) => {
     let result = await StudentsModel.updateOne(query, reqBody);
     res.status(200).json({ status: "success", data: result });
   } catch (error) {
-    res.status(200).json({ status: "fail", data: result });
+    res.status(200).json({ status: "fail", data: error.toString() });
   }
 };
 
@@ -54,6 +54,6 @@ exports.DeleteStudent = async (req, res) => {
     let result = await StudentsModel.deleteOne(query);
     res.status(200).json({ status: "success", data: result });
   } catch (error) {
-    rea.status(200).json({ status: "fail", data: result });
+    rea.status(200).json({ status: "fail", data: error.toString() });
   }
 };
