@@ -1,5 +1,5 @@
 import axios from "axios";
-let BaseURL = "http://localhost:8080/api/v1";
+let BaseURL = "http://mern-crud-app-peach.vercel.app/api/v1";
 
 //create student
 
